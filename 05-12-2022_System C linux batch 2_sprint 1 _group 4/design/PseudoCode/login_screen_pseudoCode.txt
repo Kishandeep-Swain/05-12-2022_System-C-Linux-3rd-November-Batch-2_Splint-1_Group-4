@@ -1,0 +1,94 @@
+Login Screen :-
+
+
+
+    Begin   
+
+    define SUCCESS 1
+
+    declare choice : int
+
+    declare username : string
+    declare password : string
+
+    while (1)
+    do
+
+        print "1. Register new User"
+        print "2. login"
+        print "0. Quit"
+	   
+	  print "Enter your choice"
+        read  choice
+        
+
+        switch(choice)
+        
+      case 0:
+			save_application()
+			break
+        
+            
+		case 1:
+                read username
+		    
+             
+                read password
+                
+
+                if (SUCCESS == output save_user(username,password))
+                
+                    print "User registered Successfully"
+                
+			else
+				print "User registration failed !!!"
+			
+                endif
+                break
+
+            case 2:
+                read username
+                
+                read  password
+                
+        
+                if (SUCCESS == output authenticate_user(username,password))
+                
+                    if(SUCCESS == output is_user_admin(username))
+				
+					go_to_admin_Screen()
+				
+			  else 
+				      go_to_user_screen()	
+				 
+				endif
+                
+			else
+  				
+				      print "Invalid Credentials"
+				
+				endif
+				break
+				end case
+				
+				if(choice == 0)
+					print "Closing Application"
+					break
+					end if
+				end while
+				
+               
+                
+  
+    return SUCCESS
+
+
+
+
+
+
+
+
+
+
+

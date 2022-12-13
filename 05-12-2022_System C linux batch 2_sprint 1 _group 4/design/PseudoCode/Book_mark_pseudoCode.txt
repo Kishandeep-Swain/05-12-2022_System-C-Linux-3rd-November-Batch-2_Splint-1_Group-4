@@ -1,0 +1,41 @@
+
+User screen :-
+
+begin
+		define SUCCESS 1
+		define FAILURE 0
+		declare course_name : string
+		declare chapter_name : string
+		declare book_mark_page_no : int
+		
+while(1)
+do
+		read course_name
+		read chapter_name
+		read book_mark_page_no
+		
+		if(SUCCESS == output save_book_mark(course_name, chapter_name, book_mark_page_no))
+		
+			print "Book_mark added successfully"
+		else
+			print "Book_mark is not added successfully"
+		
+			All information saved in bookmarks.txt
+		endif
+		break
+	end while
+return SUCCESS
+
+	output save_book_mark(course_name, chapter_name, book_mark_page_no)
+		if(course_name == valid)
+			if(chapter_name == valid)
+				output add_book_mark
+	
+		return FAILURE
+		
+		
+	
+
+
+			
+		

@@ -1,0 +1,80 @@
+Link Screen :-
+
+Begin
+
+		define SUCCESS 1
+
+		declare course_number : int
+		declare chapter_number: int
+		declare serial_number: int
+		
+while(1)
+do
+
+	print "1.Add new link"
+	print "2.Modify link"
+	print "3.Delete link"
+	print "0.Quit"
+	
+	print "Enter your choice"
+	read choice
+	
+	switch(choice)
+	
+	case 0:
+			save_application()
+			break
+	case 1:
+			read course_number
+			read chapter_number
+			read serial_number
+			
+			if(SUCCESS == output save_link(course_number, chapter_number, serial_number))
+			
+				print "Link added successfully"
+				
+			else
+				print "Link is not added"
+			endif
+			break
+	case 2:
+			read course_number
+			read chapter_number
+			read new_serial_number
+			
+			if(SUCCESS == output modify_link(course_number, chapter_number, new_serial_number))
+			
+				print "Link modified successfully"
+				
+			else
+				print "Link is not modified"
+			endif
+			break
+			 All new link added to link.txt file
+	case 3:
+			read course_number
+			read chapter_number
+			read serial_number
+			
+			if(SUCCESS == output delete_link(course_number, chapter_number, serial_number))
+			
+				print "Link deleted successfully"
+				
+			else
+				print "Link is not deleted"
+			endif
+			break
+			end case
+			
+			if(choice == 0)
+				print "Closing Application"
+				break
+				end if
+			end while
+			
+
+	return Success
+	
+	
+	
+				
