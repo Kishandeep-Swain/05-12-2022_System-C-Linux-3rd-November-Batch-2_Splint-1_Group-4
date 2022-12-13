@@ -1,3 +1,0 @@
-C0001,CH02,Summary,./data/summary.pdf
-C0002,CH01,Introduction,./data/content.pdf
-C0002,CH02,OOPS,./data/oops.pdf
